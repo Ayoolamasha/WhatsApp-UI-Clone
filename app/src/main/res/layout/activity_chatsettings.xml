@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settingsAppbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/contactToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_white"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/content_descOut"
+                    />
+
+                <TextView
+                    android:id="@+id/selectText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toolBarChatSettings"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorWhiteChocolate"
+                    android:textSize="20sp"
+                    android:layout_marginStart="40dp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/settingsAppbarLayout"
+        android:id="@+id/realativeLayoutTheme"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/displayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/display"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorGreen2"
+            android:layout_marginStart="30dp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutThemeDisplaySettings"
+            android:layout_below="@id/displayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/themeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/content_desc1"
+                android:src="@drawable/ic_brightness_medium"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:id="@+id/themeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/themeIcon"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:text="@string/theme"
+                android:layout_toEndOf="@id/themeIcon"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/themeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/themeText"
+                android:layout_toRightOf="@id/themeIcon"
+                android:text="@string/userAccountDetails"
+                android:layout_toEndOf="@id/themeIcon"
+                android:layout_marginStart="20dp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/realativeLayoutTheme"
+        android:id="@+id/relativeLayoutWallpaper"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/wallpaperIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wallpaper"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/wallpaper"/>
+
+        <TextView
+            android:id="@+id/wallpaperText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper"
+            android:textColor="#333333"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/wallpaperIcon"
+            android:layout_toEndOf="@id/wallpaperIcon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/relativeLayoutWallpaper"
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/grey_border_bottom"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutWrapper"
+        android:layout_below="@id/viewDivider"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/chatSettingsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chatSettings"
+            android:textColor="@color/colorGreen2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" />
+
+        <!-- ENTER TEXT VIEW -->
+
+        <RelativeLayout
+            android:layout_below="@id/chatSettingsText"
+            android:layout_marginTop="10dp"
+            android:id="@+id/relativeLayoutEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/EnterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:text="@string/enterSend"
+                android:layout_marginStart="50dp" />
+
+            <TextView
+                android:id="@+id/EnterTextDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@id/EnterText"
+                android:text="@string/enterSendDetails"
+                android:layout_marginStart="50dp" />
+
+            <Switch
+                android:id="@+id/switchEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="350dp"
+                android:layout_marginStart="350dp" />
+
+
+        </RelativeLayout>
+
+        <!-- MEDIA VIEW -->
+
+        <RelativeLayout
+            android:layout_below="@id/relativeLayoutEnter"
+            android:id="@+id/relativeLayoutMedia"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mediaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:text="@string/mediaVisible"
+                android:layout_marginStart="50dp" />
+
+            <TextView
+                android:id="@+id/mediaTextDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@id/mediaText"
+                android:text="@string/mediaVisibleDetails"
+                android:layout_marginStart="50dp" />
+
+            <Switch
+                android:id="@+id/switchMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="350dp"
+                android:layout_marginStart="350dp" />
+
+
+        </RelativeLayout>
+
+        <!-- FONT VIEW -->
+
+        <RelativeLayout
+            android:layout_below="@id/relativeLayoutMedia"
+            android:id="@+id/relativeLayoutFont"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/fontText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:text="@string/fontSize"
+                android:layout_marginStart="50dp" />
+
+            <TextView
+                android:id="@+id/fontTextDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@id/fontText"
+                android:text="@string/fontSizeSmall"
+                android:layout_marginStart="50dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/relativeLayoutWrapper"
+        android:id="@+id/viewDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/grey_border_bottom"/>
+
+    <RelativeLayout
+        android:layout_below="@id/viewDivider2"
+        android:id="@+id/relativeLayoutBackup"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chatBackupIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cloud_upload"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/wallpaper"/>
+
+        <TextView
+            android:id="@+id/chatBackupText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chatBackup"
+            android:textColor="#333333"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/chatBackupIcon"
+            android:layout_toEndOf="@id/chatBackupIcon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/relativeLayoutBackup"
+        android:id="@+id/relativeLayoutChatHistory"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chatHistoryIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_history"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/wallpaper"/>
+
+        <TextView
+            android:id="@+id/chatHstoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chatHistory"
+            android:textColor="#333333"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/chatHistoryIcon"
+            android:layout_toEndOf="@id/chatHistoryIcon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
